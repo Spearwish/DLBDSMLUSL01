@@ -52,8 +52,8 @@ age_column_name = df.columns[23]
 print("Age column basic stats:\n",df[age_column_name].describe())
 df.loc[(df[age_column_name] > 99) | (df[age_column_name] < 18), age_column_name] = round(df[age_column_name].mean())
 
-# Use for DataFrame column overview
 print(df.info())
+# Use for DataFrame column overview
 print("Age column basic stats:\n",df[age_column_name].describe())
 
 df.to_csv("datasets/3_imputed_dataset.csv", index=False)
