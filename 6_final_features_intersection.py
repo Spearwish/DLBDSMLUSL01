@@ -65,21 +65,21 @@ pca_selection = ['What is your gender?_aeeflm',
                  'Do you think that discussing a mental health disorder with your employer would have negative consequences?_no']
 
 
-# Combine all lists into one
+# Combining all lists into one
 complete_selection = cov_selection + var_selection + pca_selection
 
-# Count occurrences
+# Occurrences count
 feature_counts = Counter(complete_selection)
 
-# Keep only features that occur more than once
+# Keeping only the features that occur more than once
 filtered_features = [feature for feature, count in feature_counts.items() if count > 1]
 
 print(filtered_features)
 print(len(filtered_features))
 
 
-# Convert to DataFrame for better visualization
+# Converting to DataFrame for better visualization
 #feature_counts_df = pd.DataFrame(filtered_features, columns=['Feature'])
 
-# Print the result
+# Printing the result
 #print(feature_counts_df)
