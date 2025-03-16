@@ -4,7 +4,7 @@ from sklearn.preprocessing import OrdinalEncoder
 file_path = "datasets/3_imputed_dataset.csv"
 df = pd.read_csv(file_path)
 
-# Convert the entire DataFrame to lowercase -> UPPERCASE should equal lowercase values
+# Converting the entire DataFrame to lowercase -> UPPERCASE should equal lowercase values
 df = df.map(lambda x: x.lower() if not isinstance(x, int) else x)
 
 """gender"""
