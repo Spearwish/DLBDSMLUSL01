@@ -5,8 +5,8 @@ This repository contains the code for an unsupervised learning case study as par
 ## Installation
 1. Clone the repository:
 ```shell
-git clone https://github.com/Spearwish/[...]
-cd [...]
+git clone https://github.com/Spearwish/DLBDSMLUSL01
+cd DLBDSMLUSL01
 ```
 2. Install the dependencies:
 ```shell
