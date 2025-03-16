@@ -76,10 +76,3 @@ filtered_features = [feature for feature, count in feature_counts.items() if cou
 
 print(filtered_features)
 print(len(filtered_features))
-
-
-# Converting to DataFrame for better visualization
-#feature_counts_df = pd.DataFrame(filtered_features, columns=['Feature'])
-
-# Printing the result
-#print(feature_counts_df)
