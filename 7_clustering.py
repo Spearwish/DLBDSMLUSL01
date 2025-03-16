@@ -22,14 +22,14 @@ X_2d = mds.fit_transform(df)
 
 for final_feature in final_features:
     # Choosing a categorical column for color differentiation
-    category = df[final_feature]  # Changing this if you want a different category
+    category = df[final_feature]
 
     # Generating a unique color for each category
     unique_categories = category.unique()
     palette = sns.color_palette("hsv", len(unique_categories))
     color_map = {cat: palette[i] for i, cat in enumerate(unique_categories)}
 
-    # Plotting MDS results with color mappingHow willing would you be to share with friends and family that you have a mental illness?_very open
+    # Plotting MDS results with color mapping
     plt.figure(figsize=(16, 12))
     for cat in unique_categories:
         indices = category == cat
