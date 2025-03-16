@@ -35,7 +35,7 @@ for final_feature in final_features:
         indices = category == cat
         plt.scatter(X_2d[indices, 0], X_2d[indices, 1], label=cat, color=color_map[cat])
 
-    plt.legend(loc="upper right")  # Changing legend title if using a different category
+    plt.legend(loc="upper right")
     plt.xlabel("MDS axis 1")
     plt.ylabel("MDS axis 2")
     plt.title(f"{final_feature}")
