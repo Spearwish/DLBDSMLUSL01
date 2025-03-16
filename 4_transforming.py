@@ -20,22 +20,22 @@ def sort_string(string):
 df[df.columns[24]] = df[df.columns[24]].apply(sort_string)
 
 """positions and diagnosis"""
-# Split the diagnosis and positions column by "|"
+# Splitting the diagnosis and positions column by "|"
 positions_split = df[df.columns[25]].str.split('|')
 diagnosis_split = df[df.columns[19]].str.split('|')
 
-# Create a set of all unique diagnosis / positions
+# Creating a set of all unique diagnosis / positions
 all_positions = set([item for sublist in positions_split for item in sublist])
 all_diagnosis = set([item for sublist in diagnosis_split for item in sublist])
 
-# Add one-hot encoded columns for each diagnosis / position
+# Adding one-hot encoded columns for each diagnosis / position
 for position in all_positions:
     df[position] = positions_split.apply(lambda x: 1 if position in x else 0)
 
 for diagnosis in all_diagnosis:
     df[diagnosis] = diagnosis_split.apply(lambda x: 1 if diagnosis in x else 0)
 
-# Drop the original 'diagnosis' / 'position' column
+# Dropping the original 'diagnosis' / 'position' column
 df = df.drop(columns=[df.columns[25]])
 df = df.drop(columns=[df.columns[19]])
 
